@@ -448,6 +448,7 @@ class WebsocketClient extends IPSModule
 
         $Header[] = 'Sec-WebSocket-Key: ' . $SendKey;
         $Header[] = 'Sec-WebSocket-Version: ' . $this->ReadPropertyInteger('Version');
+        $Header[] = 'bs-session-id: e8fe9333d294428eaca56e56fb4d55fd';
         $Header[] = "\r\n";
         $SendData = implode("\r\n", $Header);
         $this->SendDebug('Send Handshake', $SendData, 0);
